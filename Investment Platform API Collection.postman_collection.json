@@ -1,0 +1,239 @@
+{
+  "info": {
+    "_postman_id": "991ced53-6d47-44f0-8078-7c536764b890",
+    "name": "Investment Platform API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "35004011"
+  },
+  "item": [
+    {
+      "name": "Analytics",
+      "item": [
+        {
+          "name": "Get Analytics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY0MzNiNTBmNWUzNTA5N2MyODU3MyIsImlhdCI6MTc3ODMzNjY2N30.K7GoLMf3AljwX8piVSYWg0hFKNYZY1SxUvsYPUWKf5o",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/analytics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "analytics"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Investments",
+      "item": [
+        {
+          "name": "Invest In Deal",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY0MzNiNTBmNWUzNTA5N2MyODU3MyIsImlhdCI6MTc3ODMzODY0MH0.BQydj1J2LiRaWqa50rrLyzBrSNfzHK2QeZDY3Kh5Aoc",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n  \"dealId\": \"69ff450250f5e35097c28574\",\r\n  \"amount\": 5000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/investments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "investments"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Aniket\",\r\n  \"email\": \"Aniket@test.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"Aniket@test.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Deals",
+      "item": [
+        {
+          "name": "Create Deal",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY0MzNiNTBmNWUzNTA5N2MyODU3MyIsImlhdCI6MTc3ODMzNjY2N30.K7GoLMf3AljwX8piVSYWg0hFKNYZY1SxUvsYPUWKf5o",
+                "type": "text"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"companyName\": \"Tech Corp\",\r\n  \"industry\": \"Technology\",\r\n  \"investmentRequired\": 50000,\r\n  \"expectedROI\": 20,\r\n  \"riskLevel\": \"medium\",\r\n  \"description\": \"AI startup platform\",\r\n  \"minInvestment\": 1000,\r\n  \"maxInvestment\": 10000,\r\n  \"targetAmount\": 50000,\r\n  \"currentRaisedAmount\": 0,\r\n  \"closingDate\": \"2026-12-31\",\r\n  \"tags\": [\"AI\", \"Startup\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/deals",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "deals"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Deals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/deals",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "deals"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Recommended Deals",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmY0MzNiNTBmNWUzNTA5N2MyODU3MyIsImlhdCI6MTc3ODMzNjY2N30.K7GoLMf3AljwX8piVSYWg0hFKNYZY1SxUvsYPUWKf5o",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/deals/recommended",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "deals",
+                "recommended"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
