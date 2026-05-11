@@ -139,6 +139,6 @@ npm run dev
 
 Create `.env` file:
 
-PORT=5000
+PORT=3000
 MONGO_URI=your_mongodb_url
 JWT_SECRET=your_secret
